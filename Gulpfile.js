@@ -2,6 +2,7 @@ var gulp = require('gulp'),
 	clean = require('gulp-clean'),
 	jadeToHtml = require('gulp-jade'),
 	lessToCss = require('gulp-less'),
+	cssAutoprefixer = require('gulp-autoprefixer'),
 	pkg = require('./package.json');
 
 var paths = {
@@ -29,6 +30,7 @@ gulp.task('build:jade', function() {
 gulp.task('build:less', function() {
 	gulp.src(paths.less)
 		.pipe(lessToCss())
+		.pipe(cssAutoprefixer())
 		.pipe(gulp.dest(DIST_DIR));
 });
 gulp.task('build:raw', function() {

@@ -1,3 +1,36 @@
 body {
 	margin: 0;
 }
+
+.edge() {
+	.role, .name {
+		text-align: center;
+		margin: 0 10px;
+		padding: .5ch;
+		border: 0 solid black;
+	}
+	.hr {
+		border-bottom: 1px solid #F00;
+	}
+}
+.activation {
+	.edge();
+	.role {
+		border-width: 1px 1px 0 1px;
+	}
+	.name {
+		border-width: 0 1px 1px 1px;
+	}
+}
+.valuation {
+	.edge();
+	.role {
+		border-top-width: 1px;
+	}
+	.name {
+		border-bottom-width: 1px;
+	}
+}
+.dragging {
+	opacity: .5;
+}
